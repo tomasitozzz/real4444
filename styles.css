@@ -1,0 +1,343 @@
+/* Reset básico */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    background: linear-gradient(135deg, #0f2027, #203a43, #2c5364);
+    color: #ffffff;
+    line-height: 1.6;
+    overflow-x: hidden;
+}
+
+/* Encabezado */
+header {
+    background: linear-gradient(90deg, #0077b6, #023e8a);
+    color: white;
+    text-align: center;
+    padding: 2rem 0;
+    box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.5);
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    animation: slideDown 1.2s ease-out;
+}
+
+header h1 {
+    font-size: 3rem;
+    font-weight: bold;
+    text-shadow: 4px 4px 10px rgba(0, 0, 0, 0.7);
+}
+
+nav ul {
+    display: flex;
+    justify-content: center;
+    list-style: none;
+    gap: 2rem;
+    margin-top: 1rem;
+}
+
+nav ul li a {
+    color: white;
+    text-decoration: none;
+    font-size: 1.3rem;
+    font-weight: bold;
+    padding: 0.6rem 1.2rem;
+    border: 2px solid transparent;
+    border-radius: 30px;
+    transition: all 0.4s ease;
+}
+
+nav ul li a:hover {
+    background-color: white;
+    color: #0077b6;
+    border: 2px solid white;
+}
+
+/* Hero Section */
+.hero {
+    text-align: center;
+    color: white;
+    padding: 4rem 2rem;
+    background: linear-gradient(135deg, #0077b6, #00b4d8);
+    clip-path: polygon(0 0, 100% 0, 100% 85%, 0 100%);
+}
+
+.hero h2 {
+    font-size: 3.5rem;
+    font-weight: bold;
+    margin-bottom: 1.5rem;
+    text-shadow: 3px 3px 8px rgba(0, 0, 0, 0.5);
+    animation: bounceIn 1.5s ease-out;
+}
+
+.hero p {
+    font-size: 1.4rem;
+    margin-bottom: 2rem;
+}
+
+.hero .btn {
+    display: inline-block;
+    padding: 1rem 2.5rem;
+    background: #00b4d8;
+    color: white;
+    text-decoration: none;
+    font-size: 1.3rem;
+    font-weight: bold;
+    border-radius: 30px;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.5);
+    transition: all 0.4s ease;
+}
+
+.hero .btn:hover {
+    background: #023e8a;
+    color: white;
+    transform: translateY(-5px);
+    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.6);
+}
+
+
+/* Ofertas */
+.ofertas {
+    text-align: center;
+    padding: 3rem 2rem;
+    background: #023e8a;
+    color: white;
+    animation: fadeIn 1.5s ease-out;
+}
+
+.ofertas h2 {
+    font-size: 2.5rem;
+    margin-bottom: 2rem;
+    color: #00b4d8;
+    text-shadow: 2px 2px 6px rgba(0, 0, 0, 0.5);
+}
+
+.ofertas-container {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 2rem;
+}
+
+.oferta {
+    background: #0077b6;
+    border-radius: 15px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.5);
+    width: 250px;
+    overflow: hidden;
+    text-align: center;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    padding: 1.5rem;
+    color: white;
+}
+
+.oferta img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+    border-radius: 10px;
+    margin-bottom: 1rem;
+}
+
+.oferta h3 {
+    font-size: 1.5rem;
+    color: #00b4d8;
+    margin-bottom: 0.5rem;
+}
+
+.oferta p {
+    font-size: 1rem;
+    margin-bottom: 1rem;
+}
+
+.oferta .precio {
+    font-size: 1.4rem;
+    font-weight: bold;
+    color: #FFD700;
+}
+
+.oferta:hover {
+    transform: scale(1.05);
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.6);
+}
+
+/* Productos */
+.productos {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 2rem;
+    padding: 2rem;
+    animation: fadeIn 1.5s ease-out;
+}
+
+.producto {
+    background: #023e8a;
+    border-radius: 15px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.4);
+    text-align: center;
+    padding: 1.5rem;
+    width: 250px;
+    transition: all 0.4s ease;
+    position: relative;
+    overflow: hidden;
+    color: white;
+}
+
+.producto:hover {
+    transform: translateY(-10px) scale(1.05);
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.6);
+}
+
+.producto img {
+    width: 100%;
+    border-radius: 10px;
+    margin-bottom: 1rem;
+    transition: transform 0.4s ease;
+}
+
+.producto:hover img {
+    transform: scale(1.2);
+}
+
+.producto h3 {
+    font-size: 1.6rem;
+    margin-bottom: 0.5rem;
+    color: #00b4d8;
+}
+
+.producto p {
+    font-size: 1.1rem;
+    font-weight: bold;
+}
+
+/* Sección General */
+main section {
+    background: #0077b6;
+    border-radius: 15px;
+    padding: 2rem;
+    margin: 2rem auto;
+    max-width: 800px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.5);
+    animation: fadeIn 1.5s ease-out;
+    text-align: center;
+    color: white;
+}
+
+main section h2 {
+    font-size: 2.5rem;
+    margin-bottom: 1.5rem;
+    animation: slideIn 1.2s ease;
+    color: #00b4d8;
+}
+
+main section p {
+    font-size: 1.2rem;
+    line-height: 1.8;
+}
+
+/* Formulario */
+form {
+    background: #023e8a;
+    padding: 2rem;
+    border-radius: 15px;
+    max-width: 600px;
+    margin: 2rem auto;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.5);
+    animation: fadeIn 1.5s ease-out;
+    color: white;
+}
+
+form label {
+    display: block;
+    font-size: 1.1rem;
+    margin-bottom: 0.5rem;
+}
+
+form input,
+form textarea {
+    width: 100%;
+    padding: 1rem;
+    margin-bottom: 1.5rem;
+    border: 1px solid #00b4d8;
+    border-radius: 10px;
+    font-size: 1.1rem;
+    color: #fff;
+    background: #0f2027;
+    transition: all 0.3s ease;
+}
+
+form input:focus,
+form textarea:focus {
+    outline: none;
+    border: 1px solid #00b4d8;
+    box-shadow: 0 0 10px rgba(0, 180, 216, 0.8);
+}
+
+form button {
+    display: inline-block;
+    padding: 1rem 2.5rem;
+    background: #00b4d8;
+    color: white;
+    border: none;
+    border-radius: 30px;
+    font-size: 1.2rem;
+    cursor: pointer;
+    transition: all 0.4s ease;
+}
+
+form button:hover {
+    background: #0077b6;
+    transform: translateY(-5px);
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.4);
+}
+
+/* Footer */
+footer {
+    text-align: center;
+    padding: 1rem;
+    background: #023e8a;
+    color: white;
+    margin-top: 2rem;
+}
+
+footer p {
+    font-size: 1rem;
+}
+
+/* Animaciones */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes slideDown {
+    from {
+        transform: translateY(-100%);
+    }
+    to {
+        transform: translateY(0);
+    }
+}
+
+@keyframes bounceIn {
+    0% {
+        transform: scale(0.5);
+    }
+    60% {
+        transform: scale(1.2);
+    }
+    100% {
+        transform: scale(1);
+    }
+}
